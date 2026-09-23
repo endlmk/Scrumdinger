@@ -3,19 +3,18 @@ See LICENSE folder for this sample’s licensing information.
 */
 
 import SwiftUI
+import SwiftData
 
 struct ScrumsView: View {
-    @Binding var scrums: [DailyScrum]
+    @Query(sort: \DailyScrum.title) private var scrums: [DailyScrum]
     @State private var isPresentingNewScrumView = false
     
     var body: some View {
-        List {
-            ForEach($scrums) { $scrum in
-                NavigationLink(destination: DetailView(scrum: $scrum)) {
-                    CardView(scrum: scrum)
-                }
-                .listRowBackground(scrum.theme.mainColor)
+        List(scrums) { scrum in
+            NavigationLink(destination: DetailView(scrum: scrum)) {
+                CardView(scrum: scrum)
             }
+            .listRowBackground(scrum.theme.mainColor)
         }
         .navigationTitle("Daily Scrums")
         .toolbar {
@@ -27,15 +26,13 @@ struct ScrumsView: View {
             .accessibilityLabel("New Scrum")
         }
         .sheet(isPresented: $isPresentingNewScrumView) {
-            NewScrumSheet(scrums: $scrums)
+            NewScrumSheet()
         }
     }
 }
 
-struct ScrumsView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            ScrumsView(scrums: .constant(DailyScrum.sampleData))
-        }
+#Preview(traits: .dailyScrumsSampleData) {
+    NavigationView {
+        ScrumsView()
     }
 }

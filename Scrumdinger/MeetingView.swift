@@ -10,7 +10,8 @@ import SwiftUI
 import AVFoundation
 
 struct MeetingView: View {
-    @Binding var scrum: DailyScrum
+    @Environment(\.modelContext) private var context
+    let scrum: DailyScrum
     @StateObject var scrumTimer = ScrumTimer()
     
     private let player = AVPlayer.dingPlayer()
@@ -50,11 +51,12 @@ struct MeetingView: View {
         scrumTimer.stopScrum()
         let newHistory = History(attendees: scrum.attendees)
         scrum.history.insert(newHistory, at: 0)
+        try? context.save()
     }
 }
 
 struct MeetingView_Previews: PreviewProvider {
     static var previews: some View {
-        MeetingView(scrum: .constant(DailyScrum.sampleData[0]))
+        MeetingView(scrum: DailyScrum.sampleData[0])
     }
 }
