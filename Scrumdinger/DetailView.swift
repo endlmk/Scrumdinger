@@ -7,17 +7,17 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct DetailView: View {
-    @Binding var scrum: DailyScrum
+    let scrum: DailyScrum
     
-    @State private var data = DailyScrum.Data()
     @State private var isPresentingEditView = false
     
     var body: some View {
         List{
             Section(header: Text("Meeting Info")){
-                NavigationLink(destination: MeetingView(scrum: $scrum)) {
+                NavigationLink(destination: MeetingView(scrum: scrum)) {
                     Label("Start Meeting", systemImage: "timer")
                         .font(.headline)
                         .foregroundColor(.accentColor)
@@ -60,24 +60,20 @@ struct DetailView: View {
         .toolbar{
             Button("Edit") {
                 isPresentingEditView = true
-                data = scrum.data
             }
         }
         .sheet(isPresented: $isPresentingEditView) {
             NavigationView {
-                DetailEditView(data: $data, saveEdits: { data in
-                    scrum.update(from: data)
-                })
-                .navigationTitle(scrum.title)
+                DetailEditView(scrum: scrum)
+                    .navigationTitle(scrum.title)
             }
         }
     }
 }
 
-struct DetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            DetailView(scrum: .constant(DailyScrum.sampleData[0]))
-        }
+#Preview(traits: .dailyScrumsSampleData) {
+    @Previewable @Query(sort: \DailyScrum.title) var scrums: [DailyScrum]
+    NavigationView {
+        DetailView(scrum: scrums[0])
     }
 }
