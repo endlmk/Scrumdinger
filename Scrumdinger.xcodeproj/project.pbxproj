@@ -16,6 +16,8 @@
 		EA2564C828BE4D5B00833DC1 /* ScrumdingerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2564C728BE4D5B00833DC1 /* ScrumdingerUITestsLaunchTests.swift */; };
 		EA4C553328CF725A001AC08C /* ScrumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4C553228CF725A001AC08C /* ScrumsView.swift */; };
 		EA4EDAFE2997D7AC00AD35B4 /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4EDAFD2997D7AC00AD35B4 /* DetailEditView.swift */; };
+		EA7C1A412E80B1C200AD35B4 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7C1A402E80B1C200AD35B4 /* ThemePicker.swift */; };
+		EA7C1A3E2E80B1A100AD35B4 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7C1A3D2E80B1A100AD35B4 /* ThemeView.swift */; };
 		EA8B8A7A28E4792100E17162 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8B8A7928E4792100E17162 /* DetailView.swift */; };
 		EAAB3F1328C239C300CC9624 /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAB3F1228C239C300CC9624 /* TrailingIconLabelStyle.swift */; };
 		EADE88BE28C0DC460058376A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADE88BD28C0DC460058376A /* Theme.swift */; };
@@ -53,6 +55,8 @@
 		EA2564C728BE4D5B00833DC1 /* ScrumdingerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumdingerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EA4C553228CF725A001AC08C /* ScrumsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrumsView.swift; sourceTree = "<group>"; };
 		EA4EDAFD2997D7AC00AD35B4 /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
+		EA7C1A402E80B1C200AD35B4 /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
+		EA7C1A3D2E80B1A100AD35B4 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
 		EA8B8A7928E4792100E17162 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		EAAB3F1228C239C300CC9624 /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
 		EADE88BD28C0DC460058376A /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 				EADE88C128C0E0020058376A /* CardView.swift */,
 				EA4EDAFD2997D7AC00AD35B4 /* DetailEditView.swift */,
 				EAAB3F1228C239C300CC9624 /* TrailingIconLabelStyle.swift */,
+				EA7C1A402E80B1C200AD35B4 /* ThemePicker.swift */,
+				EA7C1A3D2E80B1A100AD35B4 /* ThemeView.swift */,
 				EA8B8A7928E4792100E17162 /* DetailView.swift */,
 			);
 			path = Scrumdinger;
@@ -289,6 +295,8 @@
 				EADE88C028C0DE5C0058376A /* DailyScrum.swift in Sources */,
 				EA8B8A7A28E4792100E17162 /* DetailView.swift in Sources */,
 				EA4EDAFE2997D7AC00AD35B4 /* DetailEditView.swift in Sources */,
+				EA7C1A412E80B1C200AD35B4 /* ThemePicker.swift in Sources */,
+				EA7C1A3E2E80B1A100AD35B4 /* ThemeView.swift in Sources */,
 				EAAB3F1328C239C300CC9624 /* TrailingIconLabelStyle.swift in Sources */,
 				EADE88BE28C0DC460058376A /* Theme.swift in Sources */,
 				EA4C553328CF725A001AC08C /* ScrumsView.swift in Sources */,
@@ -381,7 +389,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -435,7 +443,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -509,7 +517,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.endlmk.ScrumdingerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -528,7 +536,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.endlmk.ScrumdingerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
