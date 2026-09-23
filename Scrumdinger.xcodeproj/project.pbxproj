@@ -29,6 +29,7 @@
 		3987A3B6E2B74C5E818A1919 /* MeetingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85663CA90C543259AEC68B5 /* MeetingFooterView.swift */; };
 		4FC13C7EDD5F4A2D9497E499 /* AVPlayer+Ding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1586C7BC6FD414EA0FCC7C6 /* AVPlayer+Ding.swift */; };
 		5098DF2C2762450C8AC667BF /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2FF3ADB226A04274B45F2658 /* ding.wav */; };
+		A057368DE8FA45E89FB6FC96 /* NewScrumSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D37BE350014B83B9A3DC0F /* NewScrumSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		F85663CA90C543259AEC68B5 /* MeetingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeetingFooterView.swift"; sourceTree = "<group>"; };
 		E1586C7BC6FD414EA0FCC7C6 /* AVPlayer+Ding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Ding.swift"; sourceTree = "<group>"; };
 		2FF3ADB226A04274B45F2658 /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "ding.wav"; sourceTree = "<group>"; };
+		07D37BE350014B83B9A3DC0F /* NewScrumSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewScrumSheet.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				EA4C553228CF725A001AC08C /* ScrumsView.swift */,
+				07D37BE350014B83B9A3DC0F /* NewScrumSheet.swift */,
 				EADE88BC28C0DC1B0058376A /* Models */,
 				EA2564AA28BE4D5900833DC1 /* ScrumdingerApp.swift */,
 				EA2564AC28BE4D5900833DC1 /* MeetingView.swift */,
@@ -324,6 +327,7 @@
 				EAAB3F1328C239C300CC9624 /* TrailingIconLabelStyle.swift in Sources */,
 				EADE88BE28C0DC460058376A /* Theme.swift in Sources */,
 				EA4C553328CF725A001AC08C /* ScrumsView.swift in Sources */,
+				A057368DE8FA45E89FB6FC96 /* NewScrumSheet.swift in Sources */,
 				EA2564AD28BE4D5900833DC1 /* MeetingView.swift in Sources */,
 				EA2564AB28BE4D5900833DC1 /* ScrumdingerApp.swift in Sources */,
 				EADE88C228C0E0020058376A /* CardView.swift in Sources */,
