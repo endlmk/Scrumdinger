@@ -13,6 +13,7 @@ struct MeetingView: View {
     @Environment(\.modelContext) private var context
     let scrum: DailyScrum
     @StateObject var scrumTimer = ScrumTimer()
+    @Binding var errorWrapper: ErrorWrapper?
     
     private let player = AVPlayer.dingPlayer()
     
@@ -33,7 +34,11 @@ struct MeetingView: View {
             startScrum()
         }
         .onDisappear {
-            endScrum()
+            do {
+                try endScrum()
+            } catch {
+                errorWrapper = ErrorWrapper(error: error, guidance: "Meeting time was not recorded. Try again later.")
+            }
         }
         .navigationBarTitleDisplayMode(.inline)
     }
@@ -47,16 +52,16 @@ struct MeetingView: View {
         scrumTimer.startScrum()
     }
     
-    private func endScrum() {
+    private func endScrum() throws {
         scrumTimer.stopScrum()
         let newHistory = History(attendees: scrum.attendees)
         scrum.history.insert(newHistory, at: 0)
-        try? context.save()
+        try context.save()
     }
 }
 
 struct MeetingView_Previews: PreviewProvider {
     static var previews: some View {
-        MeetingView(scrum: DailyScrum.sampleData[0])
+        MeetingView(scrum: DailyScrum.sampleData[0], errorWrapper: .constant(nil))
     }
 }
