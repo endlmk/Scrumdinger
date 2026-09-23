@@ -39,7 +39,7 @@ struct DetailEditView: View {
                     TextField("New Attendee", text:    $newAttendeeName)
                     Button(action: {
                         withAnimation {
-                            let attendee = DailyScrum.Attendee(name: newAttendeeName)
+                            let attendee = Attendee(name: newAttendeeName)
                             data.attendees.append(attendee)
                             newAttendeeName = ""
                         }
