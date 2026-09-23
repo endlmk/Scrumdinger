@@ -24,6 +24,7 @@
 		EADE88C028C0DE5C0058376A /* DailyScrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADE88BF28C0DE5C0058376A /* DailyScrum.swift */; };
 		EADE88C228C0E0020058376A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADE88C128C0E0020058376A /* CardView.swift */; };
 		95F989F4D8A647758F6C1AC0 /* MeetingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64E2BB26DBA4F6493BEDC62 /* MeetingHeaderView.swift */; };
+		C94245A91A5047C3876075A3 /* ScrumProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388B10505BF44D09D9C5EB4 /* ScrumProgressViewStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		EADE88BF28C0DE5C0058376A /* DailyScrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScrum.swift; sourceTree = "<group>"; };
 		EADE88C128C0E0020058376A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		A64E2BB26DBA4F6493BEDC62 /* MeetingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeetingHeaderView.swift"; sourceTree = "<group>"; };
+		8388B10505BF44D09D9C5EB4 /* ScrumProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScrumProgressViewStyle.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				EAAB3F1228C239C300CC9624 /* TrailingIconLabelStyle.swift */,
 				EA7C1A402E80B1C200AD35B4 /* ThemePicker.swift */,
 				EA7C1A3D2E80B1A100AD35B4 /* ThemeView.swift */,
+				8388B10505BF44D09D9C5EB4 /* ScrumProgressViewStyle.swift */,
 				A64E2BB26DBA4F6493BEDC62 /* MeetingHeaderView.swift */,
 				EA8B8A7928E4792100E17162 /* DetailView.swift */,
 			);
@@ -300,6 +303,7 @@
 				EA4EDAFE2997D7AC00AD35B4 /* DetailEditView.swift in Sources */,
 				EA7C1A412E80B1C200AD35B4 /* ThemePicker.swift in Sources */,
 				EA7C1A3E2E80B1A100AD35B4 /* ThemeView.swift in Sources */,
+				C94245A91A5047C3876075A3 /* ScrumProgressViewStyle.swift in Sources */,
 				95F989F4D8A647758F6C1AC0 /* MeetingHeaderView.swift in Sources */,
 				EAAB3F1328C239C300CC9624 /* TrailingIconLabelStyle.swift in Sources */,
 				EADE88BE28C0DC460058376A /* Theme.swift in Sources */,
